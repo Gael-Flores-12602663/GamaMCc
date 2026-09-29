@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090B0F">
+  <meta name="description" content="GamaMC — servidor brasileiro de Minecraft semi-anárquico com PvP, clãs, guerras, exploração e mundo persistente.">
+  <title>GamaMC — O mundo é compartilhado. A história também.</title>
+  <link rel="icon" type="image/png" href="assets/logo-gamamc.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&family=Roboto+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="pixel-noise" aria-hidden="true"></div>
+
+  <header class="header" id="inicio">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="GamaMC — início">
+        <img src="assets/logo-gamamc.png" alt="Logo oficial do GamaMC">
+        <div>
+          <strong>GAMA<span>MC</span></strong>
+          <small>SEMI-ANARQUIA</small>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#servidor">Servidor</a>
+        <a href="#mundo">Mundo</a>
+        <a href="#guerras">Guerras</a>
+        <a href="#projeto">Projeto</a>
+        <a href="#loja">Loja</a>
+        <a href="#equipe">Equipe</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartOpen" aria-label="Abrir carrinho">
+          <span class="cart-symbol">▣</span>
+          <span id="cartCount">0</span>
+        </button>
+        <a href="#" class="btn btn-orange discord-action" data-discord>DISCORD</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-banner">
+        <img src="assets/banner-gamamc.png" alt="Banner oficial do GamaMC">
+        <div class="hero-shade"></div>
+        <div class="hero-pixels"></div>
+      </div>
+
+      <div class="container hero-card">
+        <div class="hero-lockup">
+          <img src="assets/logo-gamamc.png" alt="Logo oficial do GamaMC" class="hero-logo">
+          <div>
+            <p class="pixel-label">SERVIDOR BRASILEIRO • SEMI-ANARQUIA</p>
+            <h1>O MUNDO É COMPARTILHADO.<br><span>A HISTÓRIA TAMBÉM.</span></h1>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <p>
+            PvP livre, clãs, guerras, alianças, exploração e um mundo persistente.
+            No GamaMC, jogadores constroem a história — a staff mantém o ambiente técnico funcionando.
+          </p>
+          <div class="hero-buttons">
+            <a href="#loja" class="btn btn-orange">VER LOJA</a>
+            <a href="#servidor" class="btn btn-dark">EXPLORAR O PROJETO</a>
+          </div>
+        </div>
+
+        <div class="status-strip">
+          <div><b>ENTRADA</b><span>Gratuita</span></div>
+          <div><b>META TÉCNICA</b><span>100–150 simultâneos*</span></div>
+          <div><b>STATUS</b><span>Em desenvolvimento</span></div>
+          <div><b>ABERTURA</b><span>Fim de nov/2026*</span></div>
+        </div>
+        <small class="status-note">* Referências de planejamento condicionadas à estabilidade técnica e aos testes.</small>
+      </div>
+    </section>
+
+    <section class="section" id="servidor">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="pixel-label">01 // O SERVIDOR</p>
+            <h2>MENOS ROTEIRO.<br><span>MAIS HISTÓRIA.</span></h2>
+          </div>
+          <p class="section-copy">
+            O GamaMC é um servidor semi-anárquico: liberdade de gameplay com limites técnicos claros para preservar segurança, estabilidade e competição.
+          </p>
+        </div>
+
+        <div class="block-grid">
+          <article class="block-card block-card-wide">
+            <div class="block-icon">⚔</div>
+            <p class="pixel-label">PVP LIVRE</p>
+            <h3>Conflitos nascem do jogo.</h3>
+            <p>Rivalidades, emboscadas, disputas territoriais e guerras surgem das decisões dos próprios jogadores.</p>
+          </article>
+
+          <article class="block-card">
+            <div class="block-icon">♜</div>
+            <p class="pixel-label">CLÃS</p>
+            <h3>Construa reputação.</h3>
+            <p>Crie alianças, organize seu grupo e deixe o nome do seu clã registrado no servidor.</p>
+          </article>
+
+          <article class="block-card">
+            <div class="block-icon">◆</div>
+            <p class="pixel-label">MUNDO PERSISTENTE</p>
+            <h3>O mapa guarda marcas.</h3>
+            <p>Bases, ruínas, estradas, crateras e locais históricos permanecem quando tecnicamente possível.</p>
+          </article>
+
+          <article class="block-card">
+            <div class="block-icon">⌁</div>
+            <p class="pixel-label">STAFF</p>
+            <h3>Baixa interferência.</h3>
+            <p>A staff atua principalmente em hacks, exploits, crashes, segurança, logs e problemas técnicos.</p>
+          </article>
+
+          <article class="block-card">
+            <div class="block-icon">◇</div>
+            <p class="pixel-label">MONETIZAÇÃO</p>
+            <h3>Sem pay-to-win.</h3>
+            <p>A loja é voltada a identidade, cosméticos, comunidade e conveniência, sem vender vantagem competitiva de PvP.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section world-section" id="mundo">
+      <div class="container world-layout">
+        <div class="world-copy">
+          <p class="pixel-label">02 // MUNDO GAMAMC</p>
+          <h2>UM CONTINENTE.<br><span>ILHAS. ROTAS. CONFLITOS.</span></h2>
+          <p>
+            O desenho de mundo em estudo prioriza um grande continente central cercado por ilhas, criando espaço para exploração,
+            rotas marítimas, bases remotas, territórios de clã e pontos estratégicos.
+          </p>
+
+          <div class="world-stats">
+            <div><b>ESCALA</b><strong>7K+</strong><span>blocos por direção como referência de projeto</span></div>
+            <div><b>FORMATO</b><strong>1 + ILHAS</strong><span>continente principal com arquipélagos periféricos</span></div>
+            <div><b>FOCO</b><strong>PERSISTÊNCIA</strong><span>um mundo que acumula história</span></div>
+          </div>
+          <small class="status-note">A seed e a configuração final do mapa permanecem em validação técnica.</small>
+        </div>
+
+        <div class="pixel-map" aria-label="Representação conceitual do mundo do GamaMC">
+          <div class="map-grid"></div>
+          <div class="island island-1"></div>
+          <div class="island island-2"></div>
+          <div class="island island-3"></div>
+          <div class="continent">
+            <span>CONTINENTE<br>GAMA</span>
+          </div>
+          <div class="map-coordinates">X ±7000 // Z ±7000</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section war-section" id="guerras">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="pixel-label">03 // SISTEMA DE GUERRA</p>
+            <h2>VIU. LUTOU.<br><span>AGORA TEM HISTÓRIA.</span></h2>
+          </div>
+          <p class="section-copy">
+            O sistema de clãs transforma conflitos em guerras registradas, sem permitir que a disputa vire desorganização total.
+          </p>
+        </div>
+
+        <div class="war-grid">
+          <article>
+            <span>01</span>
+            <h3>Conflito pode virar guerra</h3>
+            <p>Combates entre clãs podem iniciar uma guerra formal, registrada pela comunidade.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Uma guerra ativa por vez</h3>
+            <p>Um clã não entra simultaneamente em outra guerra enquanto a atual estiver em andamento.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Terceiros não interferem</h3>
+            <p>Clãs de fora do conflito não entram para alterar o resultado da guerra ativa.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Registro no Discord</h3>
+            <p>Guerras e alianças ficam organizadas em área própria e são comunicadas à administração.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-section" id="projeto">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="pixel-label">04 // PROJETO</p>
+            <h2>NÃO É SÓ<br><span>UM MAPA ONLINE.</span></h2>
+          </div>
+          <p class="section-copy">
+            O GamaMC reúne infraestrutura, desenvolvimento web, audiovisual, comunidade e operação organizada em um mesmo projeto.
+          </p>
+        </div>
+
+        <div class="ecosystem">
+          <article>
+            <b>TECH</b>
+            <h3>Infraestrutura & desenvolvimento</h3>
+            <p>Configuração de servidor, plugins, segurança, testes, automações, site e operação digital.</p>
+          </article>
+          <article>
+            <b>MEDIA</b>
+            <h3>Audiovisual</h3>
+            <p>Trailers, teasers, Shorts, Reels, TikToks, eventos, guerras e retrospectivas do servidor.</p>
+          </article>
+          <article>
+            <b>OPS</b>
+            <h3>Gestão</h3>
+            <p>Áreas separadas para comunidade, staff, financeiro, comercial, audiovisual e direção.</p>
+          </article>
+          <article>
+            <b>COMMUNITY</b>
+            <h3>Discord</h3>
+            <p>Boas-vindas, suporte, loja, clãs, guerras, alianças, calls e áreas administrativas com permissões próprias.</p>
+          </article>
+        </div>
+
+        <div class="tech-education">
+          <div>
+            <p class="pixel-label">TECNOLOGIA & FORMAÇÃO</p>
+            <h3>Um projeto que também desenvolve competências técnicas.</h3>
+          </div>
+          <p>
+            A operação envolve lógica, programação, infraestrutura, web, produção audiovisual, atendimento,
+            organização de equipes e gestão de um produto digital com comunidade real.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item done">
+            <span></span>
+            <small>IDENTIDADE</small>
+            <h3>Marca oficial consolidada</h3>
+            <p>Logo, paleta, linguagem visual e materiais institucionais padronizados.</p>
+          </div>
+          <div class="timeline-item active">
+            <span></span>
+            <small>AGORA</small>
+            <h3>Infraestrutura + comunidade</h3>
+            <p>Discord, setores, servidor, segurança, mapa, loja e fluxo operacional em construção/testes.</p>
+          </div>
+          <div class="timeline-item">
+            <span></span>
+            <small>PRÓXIMO</small>
+            <h3>Testes e lançamento</h3>
+            <p>Abertura pública somente após validação suficiente de estabilidade e segurança.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section store-section" id="loja">
+      <div class="container">
+        <div class="section-head store-head">
+          <div>
+            <p class="pixel-label">05 // LOJA OFICIAL</p>
+            <h2>APOIE O GAMA.<br><span>SEM COMPRAR VANTAGEM.</span></h2>
+          </div>
+          <p class="section-copy">
+            Monte o carrinho no site e conclua o pedido dentro do Discord oficial.
+          </p>
+        </div>
+
+        <div class="plans">
+          <article class="plan">
+            <p class="plan-tag">INÍCIO</p>
+            <h3>APOIADOR</h3>
+            <div class="plan-price"><span>R$</span><strong>9,99</strong><small>/mês</small></div>
+            <p>Entrada na linha de apoio ao projeto, com identidade e benefícios comunitários.</p>
+            <ul>
+              <li>Identidade de apoiador</li>
+              <li>Destaque comunitário</li>
+              <li>Sem vantagem de PvP</li>
+            </ul>
+            <button class="btn btn-plan add-product"
+              data-id="apoiador-mensal"
+              data-name="Apoiador"
+              data-price="9.99"
+              data-cycle="Mensal">ADICIONAR</button>
+          </article>
+
+          <article class="plan">
+            <p class="plan-tag">COMUNIDADE</p>
+            <h3>GAMA+</h3>
+            <div class="plan-price"><span>R$</span><strong>19,99</strong><small>/mês</small></div>
+            <p>Mais presença na comunidade e um pacote ampliado de identidade.</p>
+            <ul>
+              <li>Base do Apoiador</li>
+              <li>Identidade Gama+</li>
+              <li>Extras sociais/cosméticos</li>
+            </ul>
+            <button class="btn btn-plan add-product"
+              data-id="gama-plus-mensal"
+              data-name="Gama+"
+              data-price="19.99"
+              data-cycle="Mensal">ADICIONAR</button>
+          </article>
+
+          <article class="plan plan-featured">
+            <div class="plan-badge">POPULAR</div>
+            <p class="plan-tag">PREMIUM</p>
+            <h3>GAMA MAX</h3>
+            <div class="plan-price"><span>R$</span><strong>29,99</strong><small>/mês</small></div>
+            <p>O nível mensal premium do GamaMC, com pacote de identidade ampliado.</p>
+            <ul>
+              <li>Benefícios anteriores</li>
+              <li>Identidade Gama Max</li>
+              <li>Pacote cosmético ampliado</li>
+            </ul>
+            <button class="btn btn-plan add-product"
+              data-id="gama-max-mensal"
+              data-name="Gama Max"
+              data-price="29.99"
+              data-cycle="Mensal">ADICIONAR</button>
+          </article>
+
+          <article class="plan plan-maxplus">
+            <div class="plan-badge">MAX PLUS</div>
+            <p class="plan-tag">NÍVEL MÁXIMO</p>
+            <h3>GAMA MAX PLUS</h3>
+            <p class="maxplus-copy">Escolha entre acesso mensal ou aquisição permanente.</p>
+
+            <div class="maxplus-options">
+              <div>
+                <small>MENSAL</small>
+                <strong>R$ 49,99</strong>
+                <button class="btn btn-plan add-product"
+                  data-id="gama-max-plus-mensal"
+                  data-name="Gama Max Plus"
+                  data-price="49.99"
+                  data-cycle="Mensal">ADICIONAR MENSAL</button>
+              </div>
+              <div>
+                <small>PERMANENTE</small>
+                <strong>R$ 79,99</strong>
+                <button class="btn btn-orange add-product"
+                  data-id="gama-max-plus-permanente"
+                  data-name="Gama Max Plus"
+                  data-price="79.99"
+                  data-cycle="Permanente">ADICIONAR PERMANENTE</button>
+              </div>
+            </div>
+
+            <ul>
+              <li>Nível máximo de identidade</li>
+              <li>Benefícios públicos do Max Plus</li>
+              <li>Sem vantagem competitiva de PvP</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="store-disclaimer">
+          Benefícios específicos podem ser ajustados antes da abertura. A versão publicada no Discord oficial prevalece.
+        </p>
+      </div>
+    </section>
+
+    <section class="section transparency-section">
+      <div class="container transparency">
+        <div>
+          <p class="pixel-label">06 // TRANSPARÊNCIA</p>
+          <h2>OPERAÇÃO<br><span>RESPONSÁVEL.</span></h2>
+        </div>
+        <div class="transparency-grid">
+          <article>
+            <h3>Conformidade</h3>
+            <p>A gestão declara manter serviços, permissões e documentação operacional sob revisão e organização formal.</p>
+          </article>
+          <article>
+            <h3>Minecraft</h3>
+            <p>Monetização, comunicação e uso de propriedade intelectual devem seguir os termos e diretrizes vigentes aplicáveis ao Minecraft.</p>
+          </article>
+          <article>
+            <h3>Parcerias</h3>
+            <p>Parceiros só devem ser apresentados publicamente após validação técnica, jurídica e autorização de divulgação.</p>
+          </article>
+          <article>
+            <h3>Segurança</h3>
+            <p>Dados de cartão, senhas e tokens de bot não são coletados pelo checkout desta versão do site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-section" id="equipe">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="pixel-label">07 // DIREÇÃO</p>
+            <h2>QUEM CONSTRÓI<br><span>O GAMAMC.</span></h2>
+          </div>
+        </div>
+
+        <div class="leaders">
+          <article>
+            <p class="pixel-label">CEO</p>
+            <h3>Gael Flores</h3>
+            <span>Direção geral e desenvolvimento do projeto.</span>
+          </article>
+          <article>
+            <p class="pixel-label">CEO</p>
+            <h3>Gabriel Matoso</h3>
+            <span>Administração e direção do projeto.</span>
+          </article>
+        </div>
+
+        <div class="departments">
+          <span>FINANCEIRO</span>
+          <span>COMERCIAL</span>
+          <span>AUDIOVISUAL</span>
+          <span>STAFF</span>
+          <span>COMUNIDADE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <div class="container final-inner">
+        <img src="assets/logo-gamamc.png" alt="Logo oficial GamaMC">
+        <p class="pixel-label">GAMAMC // 2026</p>
+        <h2>ENTRE NO MUNDO.<br><span>DEIXE SUA MARCA.</span></h2>
+        <div>
+          <a href="#" class="btn btn-orange discord-action" data-discord>ENTRAR NO DISCORD</a>
+          <a href="#loja" class="btn btn-dark">ABRIR LOJA</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-gamamc.png" alt="">
+        <div><b>GAMAMC</b><span>O mundo é compartilhado. A história também.</span></div>
+      </div>
+      <p>
+        Projeto independente. Não afiliado, associado ou endossado pela Mojang Studios ou Microsoft.
+        Minecraft e marcas relacionadas pertencem aos seus respectivos titulares.
+      </p>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart" id="cart" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="pixel-label">LOJA GAMAMC</p>
+        <h2>CARRINHO</h2>
+      </div>
+      <button id="cartClose" aria-label="Fechar carrinho">×</button>
+    </div>
+
+    <div class="cart-list" id="cartList"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+      <span>▣</span>
+      <h3>Nenhum plano adicionado.</h3>
+      <p>Escolha uma opção na loja oficial.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total"><span>TOTAL</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button class="btn btn-orange btn-full" id="checkoutOpen">FINALIZAR PELO DISCORD</button>
+      <small>O pedido é gerado no site e finalizado em ticket oficial.</small>
+    </div>
+  </aside>
+
+  <div class="modal" id="checkout" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="checkoutClose" aria-label="Fechar">×</button>
+      <p class="pixel-label">CHECKOUT // DISCORD</p>
+      <h2>GERAR PEDIDO</h2>
+      <p class="modal-intro">O site cria um código e copia o resumo do pedido. O pagamento é concluído no Discord oficial.</p>
+
+      <form id="checkoutForm">
+        <label>
+          Nick no Minecraft
+          <input id="minecraftNick" required maxlength="24" placeholder="SeuNick">
+        </label>
+        <label>
+          Usuário do Discord
+          <input id="discordUser" required maxlength="64" placeholder="@usuario">
+        </label>
+        <label>
+          E-mail <small>(opcional)</small>
+          <input id="email" type="email" placeholder="voce@email.com">
+        </label>
+
+        <div class="order-box" id="orderBox"></div>
+        <button class="btn btn-orange btn-full" type="submit">GERAR PEDIDO E ABRIR DISCORD</button>
+      </form>
+
+      <p class="secure-note">Este formulário não solicita senha, cartão ou credenciais do Discord.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
