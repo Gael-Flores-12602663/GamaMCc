@@ -43,3 +43,18 @@
 
 /* Navegação com redes sociais: layout compacto em telas intermediárias. */
 @media (min-width:761px) and (max-width:1260px){.navwrap{gap:10px}.nav{gap:10px}.nav a{font-size:10px}.brand{font-size:24px}.brand img{width:40px;height:40px}.desktop-cta{display:none}}
+
+/* Contato comercial acessível: alternativa para computadores sem programa de e-mail */
+.proposal-dialog{width:min(92vw,520px);max-height:min(90vh,720px);max-height:min(90dvh,720px);padding:0;border:1px solid #75401f;background:#101318;color:var(--text);box-shadow:0 22px 90px #000b}
+.proposal-dialog::backdrop{background:rgba(0,0,0,.77);backdrop-filter:blur(5px)}
+.proposal-dialog-inner{padding:clamp(22px,4vw,38px)}
+.proposal-dialog-head{display:flex;align-items:start;justify-content:space-between}
+.proposal-dialog .section-tag{margin:0 0 14px}
+.proposal-close{background:transparent;border:1px solid #474747;color:#fff;width:38px;height:38px;cursor:pointer;font-size:26px;line-height:1}
+.proposal-dialog h2{font:900 clamp(37px,7vw,57px)/1 'Barlow Condensed',Impact,sans-serif;margin:0 0 14px}
+.proposal-dialog p{color:#b1b5bd;line-height:1.7;font-size:14px;margin:0 0 18px}
+.proposal-action{display:flex;width:100%;margin:12px 0}
+.proposal-email{margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border:1px solid #3b414b;background:#171a20;padding:12px 14px;font-size:13px;overflow-wrap:anywhere}
+.proposal-email button{background:transparent;border:0;color:var(--orange);font-weight:800;cursor:pointer;min-height:36px}
+.proposal-dialog .proposal-feedback{min-height:20px;margin:7px 0 0;font-size:12px;color:#f4bd87}
+@media(max-width:440px){.proposal-action{font-size:11px;padding:0 12px;white-space:normal;text-align:center}}
