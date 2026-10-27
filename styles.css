@@ -13,3 +13,30 @@
 .skip-link{position:fixed;top:-90px;left:16px;z-index:150;padding:12px 18px;background:var(--orange);color:#080a0d;font-weight:800}
 .skip-link:focus{top:10px}
 @media(min-width:761px) and (max-width:1100px){.navwrap{gap:10px}.nav{gap:9px}.nav a{font-size:10px;white-space:nowrap}.brand{font-size:25px}.brand img{width:42px;height:42px}}
+
+/* GamaMC Motion — interatividade progressiva e sem dependências externas */
+.hero{isolation:isolate}
+.hero-content{z-index:2}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(460px circle at var(--pointer-x,75%) var(--pointer-y,42%),rgba(255,120,0,.105),transparent 75%);opacity:.9}
+.hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.hero-particles i{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);background:#ffa544;border-radius:2px;opacity:0;box-shadow:0 0 13px rgba(255,120,0,.6);animation:ember var(--d) linear infinite;animation-delay:var(--delay)}
+@keyframes ember{0%{transform:translate3d(0,32px,0) rotate(0);opacity:0}20%{opacity:.55}75%{opacity:.3}100%{transform:translate3d(var(--drift),-145px,0) rotate(130deg);opacity:0}}
+.hero-emblem{transform:translate3d(var(--px,0px),var(--py,0px),0);transition:transform .35s ease-out;will-change:transform}
+.emblem-ring{position:relative}
+.emblem-ring:after{content:"";position:absolute;inset:11%;border:1px solid rgba(255,160,60,.2);border-radius:50%;pointer-events:none;animation:emblemPulse 5s ease-in-out infinite}
+@keyframes emblemPulse{50%{transform:scale(1.10);opacity:.15}}
+.feature{--rx:0deg;--ry:0deg;--mx:50%;--my:50%;transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));transition:transform .24s ease,border-color .24s ease;transform-style:preserve-3d}
+.feature:hover{transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));border-color:rgba(255,120,0,.65)}
+.feature:before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(255,130,25,.13),transparent 70%);opacity:0;pointer-events:none;transition:opacity .25s}
+.feature:hover:before{opacity:1}
+.feature>div,.feature>h3,.feature>p{position:relative}
+.btn-orange{position:relative;overflow:hidden}
+.btn-orange:after{content:"";position:absolute;top:-70%;bottom:-70%;left:-40%;width:27%;transform:translateX(-220%) rotate(25deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.32),transparent);pointer-events:none}
+.btn-orange:hover:after{animation:buttonShine .75s ease-out both}
+@keyframes buttonShine{to{transform:translateX(640%) rotate(25deg)}}
+.js-motion .reveal{opacity:0;transform:translateY(30px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.js-motion .reveal.is-visible{opacity:1;transform:translateY(0)}
+.nav a.active{color:#fff}
+.nav a.active:after{content:"";display:block;height:2px;background:var(--orange);margin-top:5px}
+@media(pointer:coarse),(max-width:760px){.hero-emblem{transform:none;will-change:auto}.feature,.feature:hover{transform:none}.hero:after{display:none}.hero-particles i:nth-child(n+13){display:none}}
+@media(prefers-reduced-motion:reduce){.js-motion .reveal,.js-motion .reveal.is-visible{opacity:1;transform:none;transition:none}.hero-particles i,.emblem-ring:after,.btn-orange:hover:after{animation:none;display:none}.hero-emblem,.feature,.feature:hover{transform:none;transition:none}.hero:after{display:none}}
