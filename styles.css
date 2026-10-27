@@ -4,3 +4,12 @@
 .hero h1{font-size:clamp(52px,5.9vw,92px);line-height:.95}
 @media(max-width:760px){.hero h1{font-size:clamp(46px,9.7vw,72px)}}
 @media(max-width:470px){.hero h1{font-size:clamp(38px,10vw,50px)}}
+
+/* Acessibilidade e navegação: melhorias sem alterar a identidade visual. */
+:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+@media(max-width:760px){.nav{max-height:calc(100dvh - 72px);overflow-y:auto}.nav a{min-height:44px;display:flex;align-items:center}}
+@media(min-width:761px) and (max-width:1190px){.navwrap{gap:15px}.nav{gap:12px}.nav a{font-size:11px}}
+
+.skip-link{position:fixed;top:-90px;left:16px;z-index:150;padding:12px 18px;background:var(--orange);color:#080a0d;font-weight:800}
+.skip-link:focus{top:10px}
+@media(min-width:761px) and (max-width:1100px){.navwrap{gap:10px}.nav{gap:9px}.nav a{font-size:10px;white-space:nowrap}.brand{font-size:25px}.brand img{width:42px;height:42px}}
