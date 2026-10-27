@@ -143,3 +143,44 @@ updateScroll();
     navSections.forEach(item => sectionObserver.observe(item.section));
   }
 })();
+
+/* Contato comercial: Gmail funciona mesmo se nenhum app de e-mail estiver configurado. */
+(() => {
+  const trigger = document.getElementById('proposal-trigger');
+  const dialog = document.getElementById('proposal-dialog');
+  const copy = document.getElementById('copy-proposal-email');
+  const feedback = document.getElementById('proposal-feedback');
+  if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
+  trigger.addEventListener('click', event => {
+    event.preventDefault();
+    feedback.textContent = '';
+    if (!dialog.open) dialog.showModal();
+  });
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) dialog.close();
+  });
+  if (copy) {
+    copy.addEventListener('click', async () => {
+      const address = 'contato@gamamc.com';
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(address);
+        } else {
+          const field = document.createElement('textarea');
+          field.value = address;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.appendChild(field);
+          field.select();
+          const success = document.execCommand('copy');
+          field.remove();
+          if (!success) throw new Error('copy failed');
+        }
+        feedback.textContent = 'E-mail copiado. Cole no serviço de e-mail de sua preferência.';
+      } catch (error) {
+        feedback.textContent = 'Selecione e copie: ' + address;
+      }
+    });
+  }
+})();
