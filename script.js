@@ -34,7 +34,7 @@ updateScroll();
   sections.forEach(section => {
     const candidates = section.matches('.statement, .join-card')
       ? [section]
-      : Array.from(section.querySelectorAll('.section-tag, h2, .lead, .feature, .steps article, .join-card, .partner-panel, .faq-items details, .about-visual'));
+      : Array.from(section.querySelectorAll('.section-tag, h2, .lead, .feature, .steps article, .join-card, .partner-panel, .social-card, .faq-items details, .about-visual'));
     candidates.forEach((element, index) => {
       element.classList.add('reveal');
       element.style.setProperty('--reveal-delay', (index % 4) * 70 + 'ms');
