@@ -33,6 +33,28 @@
     if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return 'DATA A CONFIRMAR';
     return new Intl.DateTimeFormat('pt-BR', { timeZone: 'UTC', day: '2-digit', month: 'short', year: 'numeric' }).format(date).toUpperCase();
   };
+  // O conteúdo editorial é publicado pelo backend autenticado da Railway.
+  // Se a API estiver indisponível, permanece o comunicado público de contingência.
+  const articleFrom = item => {
+    const article=document.createElement('article'); article.className='portal-news-card';
+    const date=document.createElement('small');
+    date.textContent=safeDate(item.date)+' / '+String(item.category||'NOVIDADES').slice(0,30);
+    const title=document.createElement('h3');title.textContent=String(item.title||'').slice(0,120);
+    const description=document.createElement('p');description.textContent=String(item.summary||'').slice(0,450);
+    article.append(date,title,description);return article;
+  };
+  if(newsList) {
+    fetch('https://gamamc-site-production.up.railway.app/api/public/news',{mode:'cors',credentials:'omit',cache:'no-store'})
+      .then(response=>{if(!response.ok)throw Error('API de notícias indisponível');return response.json();})
+      .then(data=>{
+        if(!Array.isArray(data.news)||!data.news.length)return;
+        const fragment=document.createDocumentFragment();
+        data.news.slice(0,6).filter(item=>item&&typeof item.title==='string'&&typeof item.summary==='string').forEach(item=>fragment.appendChild(articleFrom(item)));
+        if(fragment.childNodes.length){newsList.dataset.remoteLoaded='1';newsList.replaceChildren(fragment);}
+      })
+      .catch(()=>{ /* Preserva os comunicados estáticos quando necessário. */ });
+  }
+
   fetch('/portal-publico.json', { cache: 'no-store' })
     .then(response => { if (!response.ok) throw new Error('Configuração indisponível'); return response.json(); })
     .then(data => {
@@ -42,7 +64,7 @@
         setText('public-players', 'Disponível após integração');
         if (typeof data.status.version === 'string') setText('public-version', data.status.version);
       }
-      if (!newsList || !Array.isArray(data.news)) return;
+      if (!newsList || !Array.isArray(data.news) || newsList.dataset.remoteLoaded === '1') return;
       const entries = data.news.slice(0, 6).filter(item => item && typeof item.title === 'string' && typeof item.summary === 'string' && item.title.length <= 120 && item.summary.length <= 500);
       if (!entries.length) return;
       const fragment = document.createDocumentFragment();
