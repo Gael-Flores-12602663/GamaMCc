@@ -99,3 +99,64 @@
 @media(max-width:1020px){.social-grid{gap:12px}.social-card{padding:20px;min-height:325px}.social-card-main strong{font-size:clamp(35px,4.8vw,48px)}.social-topline-deco{display:none}}
 @media(max-width:760px){.social-intro{display:block}.social-intro>p{margin-top:25px;max-width:590px}.social-grid{grid-template-columns:1fr;gap:14px}.social-card{min-height:270px;padding:25px}.social-card-main{padding-top:32px}.social-card-main strong{font-size:53px}.social-signoff{flex-wrap:wrap;line-height:1.7}.social-signoff-line{display:none}}
 @media(prefers-reduced-motion:reduce){.social-card,.social-icon,.social-arrow,.social-external,.social-card:before{transition:none}.social-card:hover{transform:none}.social-card:hover .social-icon{transform:none}}
+
+/* Mobile hotfix 27/10/2026 — proporções, overflow e conteúdo visível no Safari iOS */
+@media(max-width:760px){
+  html,body{max-width:100%;overflow-x:clip}
+  .container{width:100%;padding-inline:20px}
+  .topbar,.navwrap{width:100%}
+  .navwrap{gap:12px}
+  .brand{min-width:0;max-width:calc(100% - 62px);font-size:24px;gap:9px}
+  .brand img{flex:none;width:40px;height:40px}
+  .brand small{font-size:8px;letter-spacing:.16em}
+  .menu-toggle{flex:none;margin-left:auto}
+  .hero{min-height:auto}
+  .hero-content{padding-top:42px;padding-bottom:34px}
+  .hero-layout{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+  .hero-copy{width:100%;min-width:0}
+  .mini-kicker{margin:25px 0 14px}
+  .hero h1{font-size:clamp(40px,10vw,66px);line-height:.98;white-space:normal;overflow-wrap:normal}
+  .hero-copy>p{margin:23px 0;font-size:14px;line-height:1.75}
+  .hero-foot{margin-top:28px;gap:10px 18px}
+  .hero-emblem{height:auto;min-height:250px;max-height:310px;aspect-ratio:1;margin:16px auto 8px;width:min(100%,310px)}
+  .emblem-ring{width:79%;max-width:235px}
+  .emblem-ring img{width:100%;height:auto;max-width:100%;object-fit:contain}
+  .orbit-one{width:95%;height:auto;aspect-ratio:1}
+  .orbit-two{width:72%;height:auto;aspect-ratio:1}
+  .badge-float{font-size:8px;letter-spacing:.04em;padding:9px 10px}
+  .b1{right:0;top:16%}
+  .b2{left:0;bottom:11%}
+  .hero-bottom .container{min-height:52px;height:auto;padding-block:12px;line-height:1.5;letter-spacing:.09em}
+  .eyebrow{flex-wrap:wrap;line-height:1.6;letter-spacing:.09em}
+  .ticker{height:43px}
+  .ticker-track{font-size:19px}
+  .section{padding:64px 0}
+  .section h2{font-size:clamp(40px,11vw,57px);overflow-wrap:break-word}
+  .section-tag{margin-bottom:18px}
+  .two-col{gap:28px}
+  .about-visual{min-height:275px}
+  .features{grid-template-columns:1fr;gap:14px}
+  .feature,.feature-main{grid-column:auto;min-height:230px;padding:23px}
+  .feature-main{min-height:280px}
+  .feature-glyph{font-size:73px;right:20px;top:38px;opacity:.7}
+  .feature h3,.feature-main h3{font-size:clamp(30px,8vw,39px);line-height:1.07;margin:70px 0 9px;max-width:100%}
+  .feature p{font-size:13px;line-height:1.7}
+  .section-head{margin-bottom:27px}
+  .statement{padding:70px 20px}
+  .statement h2{font-size:clamp(54px,13vw,80px)}
+  .join-card{margin-top:45px}
+  .partner-panel{min-height:280px}
+  .social-card{min-width:0}
+  .social-signoff{overflow-wrap:anywhere}
+  .footer-main,.footer-links{min-width:0}
+  /* Evita seções invisíveis em Safari/iOS devido ao IntersectionObserver */
+  .js-motion .reveal{opacity:1!important;transform:none!important;transition:none!important}
+}
+@media(max-width:390px){
+  .container{padding-inline:17px}
+  .hero h1{font-size:clamp(38px,10vw,47px)}
+  .hero-emblem{width:min(100%,278px);min-height:235px}
+  .badge-float{font-size:7px}
+  .brand{font-size:22px}
+  .section h2{font-size:clamp(38px,10.8vw,48px)}
+}
