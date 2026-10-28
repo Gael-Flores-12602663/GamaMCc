@@ -1,0 +1,22 @@
+{
+  "status": {
+    "phase": "prelaunch",
+    "version": "26.3",
+    "ip": null,
+    "players": null
+  },
+  "news": [
+    {
+      "date": "2026-10-27",
+      "category": "PLATAFORMA",
+      "title": "Novo portal GamaMC",
+      "summary": "O site ganha seções de VIPs, galeria, desenvolvimento do projeto, notícias e espaço para a comunidade."
+    },
+    {
+      "date": "2026-10-27",
+      "category": "COMUNIDADE",
+      "title": "Redes sociais em destaque",
+      "summary": "Instagram, TikTok e Discord estão reunidos em uma área própria, facilitando o acompanhamento das novidades."
+    }
+  ]
+}
