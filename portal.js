@@ -50,7 +50,7 @@
         if(!Array.isArray(data.news)||!data.news.length)return;
         const fragment=document.createDocumentFragment();
         data.news.slice(0,6).filter(item=>item&&typeof item.title==='string'&&typeof item.summary==='string').forEach(item=>fragment.appendChild(articleFrom(item)));
-        if(fragment.childNodes.length)newsList.replaceChildren(fragment);
+        if(fragment.childNodes.length){newsList.dataset.remoteLoaded='1';newsList.replaceChildren(fragment);}
       })
       .catch(()=>{ /* Preserva os comunicados estáticos quando necessário. */ });
   }
@@ -64,7 +64,7 @@
         setText('public-players', 'Disponível após integração');
         if (typeof data.status.version === 'string') setText('public-version', data.status.version);
       }
-      if (!newsList || !Array.isArray(data.news)) return;
+      if (!newsList || !Array.isArray(data.news) || newsList.dataset.remoteLoaded === '1') return;
       const entries = data.news.slice(0, 6).filter(item => item && typeof item.title === 'string' && typeof item.summary === 'string' && item.title.length <= 120 && item.summary.length <= 500);
       if (!entries.length) return;
       const fragment = document.createDocumentFragment();
