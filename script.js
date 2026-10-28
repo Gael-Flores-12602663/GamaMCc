@@ -27,9 +27,10 @@ updateScroll();
 (() => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(pointer: fine)');
+  const mobileLayout = window.matchMedia('(max-width: 760px)');
   if (reduced.matches) return;
 
-  const sections = document.querySelectorAll('.section, .statement, .join-card');
+  const sections = mobileLayout.matches ? [] : document.querySelectorAll('.section, .statement, .join-card');
   const revealTargets = [];
   sections.forEach(section => {
     const candidates = section.matches('.statement, .join-card')
