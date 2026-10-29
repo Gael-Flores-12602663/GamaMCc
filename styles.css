@@ -183,3 +183,11 @@ footer.footer .footer-links .footer-group h3{display:block;margin:0 0 16px}
 footer.footer .footer-links .footer-group a{display:block;position:static;float:none;flex:none;width:100%;margin:0;padding:0 0 13px;line-height:1.6;white-space:normal;word-break:normal}
 @media(max-width:800px){footer.footer .footer-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 22px}}
 @media(max-width:420px){footer.footer .footer-links{grid-template-columns:1fr;gap:28px}}
+
+/* Faixa laranja: dois conjuntos idênticos para rolagem contínua sem saltos */
+.ticker{width:100%;overflow:hidden;display:flex;align-items:center;isolation:isolate}
+.ticker-track{display:flex;align-items:center;flex:0 0 auto;width:max-content;min-width:0;white-space:nowrap;animation:marquee 38s linear infinite;will-change:transform}
+.ticker-set{display:flex;align-items:center;flex:0 0 auto;white-space:pre;font:inherit;line-height:1;min-height:100%}
+.ticker-set i{display:inline-block;flex:0 0 auto;line-height:1}
+@keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
