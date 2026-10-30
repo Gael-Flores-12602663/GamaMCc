@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/loja",
+      "destination": "https://gamamc-site-production.up.railway.app/"
+    },
+    {
+      "source": "/loja/:path*",
+      "destination": "https://gamamc-site-production.up.railway.app/:path*"
+    },
+    {
+      "source": "/painel",
+      "destination": "https://gamamc-site-production.up.railway.app/admin.html"
+    },
+    {
+      "source": "/painel/:path*",
+      "destination": "https://gamamc-site-production.up.railway.app/admin-:path*.html"
+    },
+    {
+      "source": "/comercio",
+      "destination": "https://gamamc-site-production.up.railway.app/comercios.html"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://gamamc-site-production.up.railway.app/api/:path*"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "https://gamamc-site-production.up.railway.app/auth/:path*"
+    },
+    {
+      "source": "/admin-:page.html",
+      "destination": "https://gamamc-site-production.up.railway.app/admin-:page.html"
+    },
+    {
+      "source": "/admin.html",
+      "destination": "https://gamamc-site-production.up.railway.app/admin.html"
+    },
+    {
+      "source": "/admin.css",
+      "destination": "https://gamamc-site-production.up.railway.app/admin.css"
+    },
+    {
+      "source": "/admin.js",
+      "destination": "https://gamamc-site-production.up.railway.app/admin.js"
+    },
+    {
+      "source": "/admin-reset.js",
+      "destination": "https://gamamc-site-production.up.railway.app/admin-reset.js"
+    },
+    {
+      "source": "/shop.js",
+      "destination": "https://gamamc-site-production.up.railway.app/shop.js"
+    },
+    {
+      "source": "/style.css",
+      "destination": "https://gamamc-site-production.up.railway.app/style.css"
+    },
+    {
+      "source": "/premium.css",
+      "destination": "https://gamamc-site-production.up.railway.app/premium.css"
+    },
+    {
+      "source": "/commerce.css",
+      "destination": "https://gamamc-site-production.up.railway.app/commerce.css"
+    },
+    {
+      "source": "/commerce.js",
+      "destination": "https://gamamc-site-production.up.railway.app/commerce.js"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "https://gamamc-site-production.up.railway.app/assets/:path*"
+    }
+  ]
+}
