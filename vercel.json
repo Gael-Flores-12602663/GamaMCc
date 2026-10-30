@@ -104,6 +104,10 @@
     {
       "source": "/ryvix-client.js",
       "destination": "https://gamamc-site-production.up.railway.app/ryvix-client.js"
+    },
+    {
+      "source": "/commerce-admin.js",
+      "destination": "https://gamamc-site-production.up.railway.app/commerce-admin.js"
     }
   ]
 }
