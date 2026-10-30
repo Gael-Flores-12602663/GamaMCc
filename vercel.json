@@ -70,6 +70,10 @@
       "destination": "https://gamamc-site-production.up.railway.app/commerce.css"
     },
     {
+      "source": "/commerce-shop.js",
+      "destination": "https://gamamc-site-production.up.railway.app/commerce-shop.js"
+    },
+    {
       "source": "/commerce.js",
       "destination": "https://gamamc-site-production.up.railway.app/commerce.js"
     },
