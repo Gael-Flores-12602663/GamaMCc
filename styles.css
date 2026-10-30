@@ -191,3 +191,14 @@ footer.footer .footer-links .footer-group a{display:block;position:static;float:
 .ticker-set i{display:inline-block;flex:0 0 auto;line-height:1}
 @keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 @media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+
+/* GamaMC — barra de rolagem vertical oficial, igual à Central de Regras */
+html{scrollbar-width:thin;scrollbar-color:#65402a #0a0d12}
+html::-webkit-scrollbar{width:9px}
+html::-webkit-scrollbar-track{background:#0a0d12}
+html::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#d46a1b,#71401e);border:2px solid #0a0d12;border-radius:99px}
+html::-webkit-scrollbar-thumb:hover{background:#ff8a26}
+body{scrollbar-color:#65402a #0a0d12}
+@media(max-width:650px){html::-webkit-scrollbar{width:5px}html::-webkit-scrollbar-thumb{border-width:1px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
