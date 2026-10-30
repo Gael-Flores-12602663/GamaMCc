@@ -96,6 +96,14 @@
     {
       "source": "/convite.html",
       "destination": "https://gamamc-site-production.up.railway.app/convite.html"
+    },
+    {
+      "source": "/ryvix.css",
+      "destination": "https://gamamc-site-production.up.railway.app/ryvix.css"
+    },
+    {
+      "source": "/ryvix-client.js",
+      "destination": "https://gamamc-site-production.up.railway.app/ryvix-client.js"
     }
   ]
 }
