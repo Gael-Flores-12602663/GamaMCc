@@ -44,7 +44,7 @@
     article.append(date,title,description);return article;
   };
   if(newsList) {
-    fetch('https://gamamc-site-production.up.railway.app/api/public/news',{mode:'cors',credentials:'omit',cache:'no-store'})
+    fetch('/api/public/news',{mode:'cors',credentials:'omit',cache:'no-store'})
       .then(response=>{if(!response.ok)throw Error('API de notícias indisponível');return response.json();})
       .then(data=>{
         if(!Array.isArray(data.news)||!data.news.length)return;
