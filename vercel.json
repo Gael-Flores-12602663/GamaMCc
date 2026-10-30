@@ -2,6 +2,10 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/regras",
+      "destination": "https://gamamcregras.vercel.app/"
+    },
+    {
       "source": "/loja",
       "destination": "https://gamamc-site-production.up.railway.app/"
     },
@@ -72,6 +76,22 @@
     {
       "source": "/assets/:path*",
       "destination": "https://gamamc-site-production.up.railway.app/assets/:path*"
+    },
+    {
+      "source": "/comercios.html",
+      "destination": "https://gamamc-site-production.up.railway.app/comercios.html"
+    },
+    {
+      "source": "/commerce-admin.html",
+      "destination": "https://gamamc-site-production.up.railway.app/commerce-admin.html"
+    },
+    {
+      "source": "/politicas.html",
+      "destination": "https://gamamc-site-production.up.railway.app/politicas.html"
+    },
+    {
+      "source": "/convite.html",
+      "destination": "https://gamamc-site-production.up.railway.app/convite.html"
     }
   ]
 }
