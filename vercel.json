@@ -120,6 +120,18 @@
     {
       "source": "/contracts.css",
       "destination": "https://gamamc-site-production.up.railway.app/contracts.css"
+    },
+    {
+      "source": "/audit-nav.js",
+      "destination": "https://gamamc-site-production.up.railway.app/audit-nav.js"
+    },
+    {
+      "source": "/audit-client.js",
+      "destination": "https://gamamc-site-production.up.railway.app/audit-client.js"
+    },
+    {
+      "source": "/audit.css",
+      "destination": "https://gamamc-site-production.up.railway.app/audit.css"
     }
   ]
 }
