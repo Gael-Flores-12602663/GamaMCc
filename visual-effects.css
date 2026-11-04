@@ -1,10 +1,7 @@
 /* GamaMC — aprimoramentos visuais incrementais, sem alterar layout ou tipografia */
 @media (prefers-reduced-motion: no-preference) {
-  .fx-reveal { opacity: 0; transform: translate3d(0, 14px, 0); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.25,1); }
-  .fx-reveal.fx-visible { opacity: 1; transform: translate3d(0,0,0); }
   .fx-card { --fx-x: 50%; --fx-y: 50%; position: relative; isolation: isolate; transition: box-shadow .28s ease, border-color .28s ease, transform .28s ease; }
-  .fx-card::after { content: ""; pointer-events: none; position: absolute; inset: 0; border-radius: inherit; z-index: 0; opacity: 0; background: radial-gradient(360px circle at var(--fx-x) var(--fx-y), rgba(255,120,0,.105), transparent 68%); transition: opacity .25s ease; }
-  .fx-card > * { position: relative; z-index: 1; }
+  .fx-card::after { content: ""; pointer-events: none; position: absolute; inset: 0; border-radius: inherit; z-index: -1; opacity: 0; background: radial-gradient(360px circle at var(--fx-x) var(--fx-y), rgba(255,120,0,.105), transparent 68%); transition: opacity .25s ease; }
   .fx-card:hover::after, .fx-card:focus-within::after { opacity: 1; }
   .fx-card:hover { box-shadow: 0 14px 38px rgba(0,0,0,.18), 0 0 20px rgba(255,120,0,.055); }
   .fx-action { transition: box-shadow .25s ease, filter .25s ease, transform .25s ease; }
@@ -18,6 +15,5 @@
   .fx-card:hover, .fx-action:hover { box-shadow: none; filter: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .fx-reveal { opacity: 1 !important; transform: none !important; }
   .fx-card, .fx-action { transition: none !important; }
 }
