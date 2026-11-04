@@ -32,11 +32,14 @@ updateScroll();
 
   const sections = mobileLayout.matches ? [] : document.querySelectorAll('.section, .statement, .join-card');
   const revealTargets = [];
+  const seen = new Set();
   sections.forEach(section => {
     const candidates = section.matches('.statement, .join-card')
       ? [section]
-      : Array.from(section.querySelectorAll('.section-tag, h2, .lead, .feature, .steps article, .join-card, .partner-panel, .social-card, .faq-items details, .about-visual'));
+      : Array.from(section.querySelectorAll('.section-tag, h2, .lead, .steps article, .join-card, .partner-panel, .social-card, .faq-items details, .about-visual'));
     candidates.forEach((element, index) => {
+      if (seen.has(element)) return;
+      seen.add(element);
       element.classList.add('reveal');
       element.style.setProperty('--reveal-delay', (index % 4) * 70 + 'ms');
       revealTargets.push(element);
