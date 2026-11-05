@@ -2,6 +2,30 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/candidaturas",
+      "destination": "https://gamamc-site-production.up.railway.app/candidaturas.html"
+    },
+    {
+      "source": "/candidaturas.html",
+      "destination": "https://gamamc-site-production.up.railway.app/candidaturas.html"
+    },
+    {
+      "source": "/applications.css",
+      "destination": "https://gamamc-site-production.up.railway.app/applications.css"
+    },
+    {
+      "source": "/applications-form.js",
+      "destination": "https://gamamc-site-production.up.railway.app/applications-form.js"
+    },
+    {
+      "source": "/applications-admin.js",
+      "destination": "https://gamamc-site-production.up.railway.app/applications-admin.js"
+    },
+    {
+      "source": "/applications-nav.js",
+      "destination": "https://gamamc-site-production.up.railway.app/applications-nav.js"
+    },
+    {
       "source": "/regras",
       "destination": "https://gamamcregras.vercel.app/"
     },
