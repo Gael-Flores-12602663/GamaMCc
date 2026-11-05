@@ -107,3 +107,8 @@
 }
 @media(max-width:380px){.portal-stat-grid{grid-template-columns:1fr}.portal-gallery-card span{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.portal-stage,.portal-vip-card,.portal-gallery-card img{transition:none}.portal-stage:hover,.portal-vip-card:hover,.portal-gallery-card:hover img{transform:none}}
+
+/* Acesso direto ao acompanhamento sem alterar os componentes originais do portal. */
+.portal-careers-track{display:inline-flex;align-items:center;margin-top:15px;color:#ffa13c;font-size:11px;font-weight:850;letter-spacing:.04em;text-decoration:none;border-bottom:1px solid rgba(255,120,0,.5);padding-bottom:5px;transition:color .2s,border-color .2s}
+.portal-careers-track:hover{color:#fff;border-color:#ff7800}
+.portal-careers-track:focus-visible{outline:2px solid #ff7800;outline-offset:4px}
