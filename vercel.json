@@ -2,6 +2,14 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/painel/candidaturas",
+      "destination": "https://gamamc-site-production.up.railway.app/admin-applications.html"
+    },
+    {
+      "source": "/acompanharcandidatura",
+      "destination": "https://gamamc-site-production.up.railway.app/acompanharcandidatura"
+    },
+    {
       "source": "/candidaturas",
       "destination": "https://gamamc-site-production.up.railway.app/candidaturas.html"
     },
@@ -156,6 +164,26 @@
     {
       "source": "/audit.css",
       "destination": "https://gamamc-site-production.up.railway.app/audit.css"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/acompanharcandidatura",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/painel/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
