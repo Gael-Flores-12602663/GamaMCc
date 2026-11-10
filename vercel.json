@@ -47,11 +47,11 @@
     },
     {
       "source": "/painel",
-      "destination": "https://gamamc-site-production.up.railway.app/admin.html"
+      "destination": "https://gamamc-site-production.up.railway.app/painel"
     },
     {
       "source": "/painel/:path*",
-      "destination": "https://gamamc-site-production.up.railway.app/admin-:path*.html"
+      "destination": "https://gamamc-site-production.up.railway.app/painel/:path*"
     },
     {
       "source": "/comercio",
