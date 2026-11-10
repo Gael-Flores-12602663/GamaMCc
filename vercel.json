@@ -2,10 +2,6 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/painel/candidaturas",
-      "destination": "https://gamamc-site-production.up.railway.app/admin-applications.html"
-    },
-    {
       "source": "/acompanharcandidatura",
       "destination": "https://gamamc-site-production.up.railway.app/acompanharcandidatura"
     },
@@ -20,6 +16,10 @@
     {
       "source": "/applications.css",
       "destination": "https://gamamc-site-production.up.railway.app/applications.css"
+    },
+    {
+      "source": "/applications-panel.css",
+      "destination": "https://gamamc-site-production.up.railway.app/applications-panel.css"
     },
     {
       "source": "/applications-form.js",
