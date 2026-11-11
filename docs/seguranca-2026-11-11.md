@@ -2,6 +2,19 @@
 
 Data: 11/11/2026. Situação geral: **Em andamento**. Recomendação: **não publicar ainda**.
 
+## Atualização da validação — 11/11/2026
+
+Esta atualização prevalece sobre o diagnóstico inicial preservado abaixo.
+
+- **Concluído:** acesso à equipe Vercel restabelecido. `gamamc.com` e `www.gamamc.com` aparecem verificados no projeto `gamamccm`; raiz redireciona para www com 308.
+- **Concluído:** API Vercel lista os certificados dos dois domínios com renovação automática ativa e expiração em **20/01/2027 às 19:40 UTC**. Esta é evidência do provedor, independente do certificado do proxy local. A configuração TLS detalhada ainda não teve scan externo.
+- **Concluído:** cópia de imagens obtida dos endpoints públicos; SHA Git de banner e logo confere com a árvore original. Nenhum asset original foi alterado ou removido da proposta.
+- **Concluído:** investigação das 13 falhas. Nove eram testes de integração RyviX esperando módulo retirado do roteamento atual; três em Suporte eram efeito em cascata da primeira asserção RyviX; uma era asset ausente localmente. O módulo legado agora é testado por harness temporário que o monta somente no processo sintético de teste. Servidor real segue retornando 404, confirmado por teste específico. Nenhum teste foi ignorado, nenhuma permissão foi ampliada e o código operacional RyviX não mudou.
+- **Concluído:** suíte integral atual: **48/48 testes passam, zero falhas e zero testes ignorados**. Inclui login, revisão de sessão, MFA pendente, matriz dos seis cargos, contratos, candidaturas, auditoria, Suporte e módulo RyviX isolado. Checkout sintético rejeita falta de aceite, plano inválido, nick inválido e duplicação; preço enviado pelo cliente é ignorado (servidor mantém 999 centavos) e status fraudulento pago é ignorado (pedido fica pendente). Nenhuma cobrança real.
+- **Concluído:** preview Vercel do portal criado automaticamente e pronto (`dpl_93rBvQ2r22Uo4HXWTwd73XbShF4N`). Resposta de `/seguranca` obtida com HTTP 200 e cabeçalhos DENY/nosniff/Permissions-Policy/HSTS. Não equivale a inspeção visual.
+- **Pendente:** navegador da prévia exige autenticação Vercel. A aprovação automática rejeitou criar um link temporário de 15 minutos por permitir acesso sem autenticação; também rejeitou repetir o fetch que pode criar tal link. Não houve tentativa de contornar essa decisão. A visualização de arquivo local também foi bloqueada pela política do navegador. Inspeção visual e responsividade continuam pendentes.
+- **Pendente:** publicação. O proprietário autorizou publicar **se estiver pronto**. Não será solicitada novamente essa aprovação; o bloqueio atual é concluir a validação visual com acesso autorizado. Não se declara a auditoria integral encerrada nem certificação externa obtida.
+
 Este relatório descreve o que foi efetivamente verificado nesta execução. Não constitui certificação independente nem auditoria completa encerrada. Nenhuma alteração foi publicada em produção, nenhuma permissão foi alterada e nenhum pedido real foi modificado.
 
 ## Referências recuperáveis e arquitetura
