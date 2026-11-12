@@ -176,6 +176,10 @@
     {
       "source": "/reports.css",
       "destination": "https://gamamc-site-production.up.railway.app/reports.css"
+    },
+    {
+      "source": "/projects-client.js",
+      "destination": "https://gamamc-site-production.up.railway.app/projects-client.js"
     }
   ],
   "headers": [
