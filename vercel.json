@@ -227,7 +227,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://gamamc-site-production.up.railway.app; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' https://cdn.ywxi.net; style-src 'self' 'sha256-dc03aSWgZY+kRFUKN5YZMjAg32LKEJCkwh+XquXtx+0='; img-src 'self' data: https://cdn.ywxi.net; connect-src 'self' https://gamamc-site-production.up.railway.app https://s3-us-west-2.amazonaws.com/mfesecure-public/host/gamamc.com/client.json; frame-src https://www.trustedsite.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
         }
       ]
     }
