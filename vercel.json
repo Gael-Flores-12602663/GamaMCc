@@ -168,6 +168,14 @@
     {
       "source": "/audit.css",
       "destination": "https://gamamc-site-production.up.railway.app/audit.css"
+    },
+    {
+      "source": "/reports.js",
+      "destination": "https://gamamc-site-production.up.railway.app/reports.js"
+    },
+    {
+      "source": "/reports.css",
+      "destination": "https://gamamc-site-production.up.railway.app/reports.css"
     }
   ],
   "headers": [
