@@ -2,6 +2,18 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/assessments.css",
+      "destination": "https://gamamc-site-production.up.railway.app/assessments.css"
+    },
+    {
+      "source": "/assessment-candidate.js",
+      "destination": "https://gamamc-site-production.up.railway.app/assessment-candidate.js"
+    },
+    {
+      "source": "/assessment-admin.js",
+      "destination": "https://gamamc-site-production.up.railway.app/assessment-admin.js"
+    },
+    {
       "source": "/mfa-reminder.js",
       "destination": "https://gamamc-site-production.up.railway.app/mfa-reminder.js"
     },
