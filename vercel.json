@@ -2,6 +2,10 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/mfa-reminder.js",
+      "destination": "https://gamamc-site-production.up.railway.app/mfa-reminder.js"
+    },
+    {
       "source": "/seguranca",
       "destination": "/seguranca.html"
     },
@@ -195,6 +199,15 @@
     }
   ],
   "headers": [
+    {
+      "source": "/mfa-reminder.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
     {
       "source": "/acompanharcandidatura",
       "headers": [
