@@ -297,6 +297,15 @@
           "value": "default-src 'self'; script-src 'self'; script-src-elem 'self' https://cdn.ywxi.net/js/1.js; style-src 'self' 'sha256-dc03aSWgZY+kRFUKN5YZMjAg32LKEJCkwh+XquXtx+0='; style-src-elem 'self' 'unsafe-inline' https://cdn.ywxi.net; img-src 'self' data: https://cdn.ywxi.net; connect-src 'self' https://gamamc-site-production.up.railway.app https://s3-us-west-2.amazonaws.com/mfesecure-public/host/gamamc.com/ https://s3-us-west-2.amazonaws.com/mfesecure-public/host/www.gamamc.com/; frame-src https://www.trustedsite.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
         }
       ]
+    },
+    {
+      "source": "/politicas.html",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; script-src-elem 'self' https://cdn.ywxi.net/js/1.js; style-src 'self' 'sha256-dc03aSWgZY+kRFUKN5YZMjAg32LKEJCkwh+XquXtx+0='; style-src-elem 'self' 'unsafe-inline' https://cdn.ywxi.net; img-src 'self' data: https://cdn.ywxi.net; connect-src 'self' https://gamamc-site-production.up.railway.app https://s3-us-west-2.amazonaws.com/mfesecure-public/host/gamamc.com/ https://s3-us-west-2.amazonaws.com/mfesecure-public/host/www.gamamc.com/; frame-src https://www.trustedsite.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
+        }
+      ]
     }
   ]
 }
